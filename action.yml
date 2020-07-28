@@ -7,7 +7,17 @@ inputs:
     required: false
     default: null
   # Input Options
-
+  extract_with:
+    description: >
+      This option is only needed if cloc is unable to figure out how to extract the contents of the input file(s) by itself.
+      Use CMD to extract binary archive files (e.g.: .tar.gz, .zip, .Z). Use the literal ''>FILE<'' as a stand-in for the actual file(s) to be extracted.
+    required: false
+    default: null
+  list_file:
+    description: >
+      Take the list of file and/or directory names to process from FILE, which has one file/directory name per line.
+      Only exact matches are counted; relative path names will be resolved starting from the directory where cloc is invoked.
+      See also --exclude-list-file.
   # Processing Options
   by_file:
     description: 'Report results for every source file encountered.'
@@ -19,7 +29,9 @@ inputs:
     default: true
   # Filter options
   exclude_list_file:
-    description: 'Ignore files and/or directories whose names appear in FILE.  FILE should have one file name per line. Only exact matches are ignored; relative path names will be resolved starting from the directory where cloc is invoked. See also --list-file.'
+    description: >
+      Ignore files and/or directories whose names appear in FILE.
+      FILE should have one file name per line. Only exact matches are ignored; relative path names will be resolved starting from the directory where cloc is invoked. See also --list-file.
     required: false
     default: null
   # Debug Options
