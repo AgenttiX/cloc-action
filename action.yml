@@ -5,7 +5,7 @@ inputs:
   path:
     description: 'Files or folders to analyze'
     required: false
-    default: $GITHUB_WORKSPACE
+    default: false
   # Input Options
 
   # Processing Options

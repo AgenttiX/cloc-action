@@ -1,6 +1,6 @@
 #!/bin/sh
 cloc \
-  ${INPUT_PATH} \
+  ${INPUT_PATH:- "${GITHUB_WORKSPACE}"} \
   # Input Options
   # Processing Options
   ${INPUT_BY_FILE:+ --by-file} \
