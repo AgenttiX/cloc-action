@@ -5,7 +5,7 @@ inputs:
   path:
     description: 'Files or folders to analyze'
     required: false
-    default: false
+    default: null
   # Input Options
 
   # Processing Options
